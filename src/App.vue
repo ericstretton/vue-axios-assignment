@@ -28,7 +28,7 @@
       <v-spacer></v-spacer>
 
       <v-btn
-        href=""
+        href="https://github.com/ericstretton/vue-axios-assignment"
         target="_blank"
         text
       >
@@ -38,7 +38,7 @@
     </v-app-bar>
 
     <v-main>
-    <PageContainer/>
+    <PageContainer class="pageGrid"/>
     </v-main>
   </v-app>
 </template>
@@ -60,3 +60,20 @@ export default {
   }),
 };
 </script>
+<style lang="scss">
+main{
+  background-color: seashell;
+  .pageGrid{
+      width: 40vw;
+      left: 35vw;
+      display: grid;
+      position: relative;
+      grid-template-rows: 1fr 1fr 1fr;
+      text-align: center;
+      background-color: bisque;
+    }
+}
+
+
+    
+</style>

@@ -6,8 +6,9 @@
             outlined
             rounded
             plain
-            italic
-        >Normal Joke</v-btn>
+            class="font-italic"
+            >Normal Text
+        </v-btn>
     </div>
 </template>
 
@@ -17,6 +18,6 @@
     }
 </script>
 
-<style lang="sass" scoped>
+<style lang="scss" scoped>
 
 </style>
