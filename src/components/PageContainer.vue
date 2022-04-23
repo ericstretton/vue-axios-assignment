@@ -4,6 +4,7 @@
             id="pageHeader">
             Chuck Norris Jokes</h1>
         <JokeButton
+        @click="getJoke"
         id="getbutton"
         />
         <div>
@@ -26,10 +27,20 @@ import JokeButton from './JokeButton.vue'
 import LoudJoke from './LoudJoke.vue'
 import NormalJoke from './NormalJoke.vue'
 import SnakeJoke from './SnakeJoke.vue'
+import {useJokeStore} from '@/stores/joke'
+import {mapState} from 'pinia'
 
     export default {
-  components: { JokeButton, NormalJoke, SnakeJoke, LoudJoke },
-        
+        name: "PageContainer",
+        components: { JokeButton, NormalJoke, SnakeJoke, LoudJoke },
+        computed: {
+            // State
+
+            // Getters
+            ...mapState(useJokeStore, ['jokeText']),
+            // Actions
+            ...mapState(useJokeStore, ["getJoke"])
+        }
     }
 </script>
 
